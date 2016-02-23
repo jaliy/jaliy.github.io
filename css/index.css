@@ -1,0 +1,12 @@
+.article h2{
+	font-size: 24px;
+	font-family: "微软雅黑";
+	font-weight: normal;
+}
+.article .txt{
+	line-height: 24px;
+	text-indent: 2em;
+}
+.article img{
+	width:100%;
+}
