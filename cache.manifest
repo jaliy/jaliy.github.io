@@ -1,11 +1,13 @@
 CACHE MANIFEST
 #我是注释，这个文件名叫cache.manifest
+#201602231824
 CACHE:
 
 #image
 images/img01.jpg
 images/img02.jpg
 images/img03.jpg
+images/icon.gif
 #css
 css/index.css
 css/justified-nav.css
