@@ -1,0 +1,17 @@
+CACHE MANIFEST
+#我是注释，这个文件名叫cache.manifest
+CACHE:
+
+#image
+images/img01.jpg
+images/img02.jpg
+images/img03.jpg
+#css
+css/index.css
+css/justified-nav.css
+#js
+
+NETWORK:
+*
+
+FALLBACK:
