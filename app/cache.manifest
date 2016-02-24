@@ -2,16 +2,26 @@ CACHE MANIFEST
 #我是注释，这个文件名叫cache.manifest
 #2016022318247
 CACHE:
+
+#html
+pages/web/index.html
+
 #image
 images/img01.jpg
 images/img02.jpg
 images/img03.jpg
 images/icon.gif
+
 #css
 css/index.css
 css/justified-nav.css
-#js
+css/web/index.css
 
+#js
+js/lib/Juicer/Juicer-min.js
+
+js/index.min.js
+js/web/index.min.js
 NETWORK:
 *
 
