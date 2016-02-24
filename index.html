@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" manifest="cache.manifest">
+<html lang="zh-CN" ><!--manifest="app/cache.manifest" -->
 	<head>
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +10,20 @@
       	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	    <![endif]-->
-	    <link rel="shortcut icon" href="images/icon.gif" />
+	    <link rel="shortcut icon" type="image/x-icon" href="app/images/icon.gif" />
 		<!-- 新 Bootstrap 核心 CSS 文件 -->
 		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<!-- 可选的Bootstrap主题文件（一般不用引入） -->
 		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="css/justified-nav.css" />
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="app/css/justified-nav.css" />
+		<link rel="stylesheet" type="text/css" href="app/css/index.css"/>
+		<script>
+			window.applicationCache.addEventListener('updateready',function(e){
+			    if(window.applicationCache.status == window.applicationCache.UPDATEREADY){
+			        window.applicationCache.swapCache();
+			    }
+			},false);
+		</script>
 	</head>
 
 	<body>
@@ -24,15 +31,15 @@
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
-        <h3 class="text-muted">Jaliy博客</h3>
+        <h3 class="text-muted">Jaliy博客1</h3>
         <nav>
           <ul class="nav nav-justified">
-            <li class="active"><a href="#">首页</a></li>
-            <li><a href="#">待定</a></li>
-            <li><a href="#">待定</a></li>
-            <li><a href="#">待定</a></li>
-            <li><a href="#">待定</a></li>
-            <li><a href="#">待定</a></li>
+            <li class="active"><a href="index.html">首页</a></li>
+            <li><a href="app/pages/web/index.html">Web前端</a></li>
+            <li><a href="#">Java入门</a></li>
+            <li><a href="#">Linux</a></li>
+            <li><a href="#">在线笔记</a></li>
+            <li><a href="#">HelloWorld</a></li>
           </ul>
         </nav>
       </div>
@@ -47,17 +54,17 @@
         <article class="col-lg-4">
           <h2>老狮子</h2>
           <p class="txt">有一只老狮子病了，躲在洞穴中大声呻吟，附近的一些动物听到狮子的呻吟声，纷纷进洞探视。狐狸听到了这消息，也前往探视，走到洞穴前，只听到老狮子呻吟声越来越大，可怜极了，这时原本打算进去的狐狸，忽然竖起耳朵，收回已经跨进洞穴的前脚，在洞穴四周来回踱步。洞里的老狮子眼见狐狸迟迟没有进洞，忍不住问狐狸说：“狐狸啊！你既然来了，为什么不进来呢？”狐狸回答：“我只见一些往里走的动物脚印，却看不到往外走出来的脚印，我怎么敢进去呢！?”</p>
-          <p><img src="images/img01.jpg"></p>
+          <p><img src="app/images/img01.jpg"></p>
         </article>
         <article class="col-lg-4">
           <h2>杀鸡</h2>
           <p class="txt">一农户在杀鸡前的晚上喂鸡，不经意地说：快吃吧，这是你最后一顿！第二日，见鸡已躺倒并留遗书：“爷已吃老鼠药，你们别想吃爷了，爷他妈也不是好惹的。”</p>
-          <p><img src="images/img02.jpg"></p>
+          <p><img src="app/images/img02.jpg"></p>
        </article>
         <article class="col-lg-4">
           <h2>美女</h2>
           <p class="txt">一位年轻男士，在风景区遇见一位漂亮有气质的美女，就一直跟在她后面走了很长的一段路，最后这位女郎忍不住转身问他说：“你为什么一直老跟着我？”他很诚恳的对她表白说：“因为你是我所见过最美丽最有气质的女人，请你答应我，当我的女朋友！”女郎回答说：“现在只要你回头看，就能看到我妹妹，她长得比我还漂亮！”那位男士听了，马上转过身，但看到的只是随处可见到的普通女子。“你为什么骗我？” 他质问那位女郎。“是你在骗我啊！如果你真的喜欢我，为何还要回头看呢？” 女郎回答说，接着转身快步离去。</p>
-          <p><img src="images/img03.jpg"></p>
+          <p><img src="app/images/img03.jpg"></p>
         </article>
       </section>
       <!-- Site footer -->
@@ -66,9 +73,10 @@
       </footer>
     </div> <!-- /container -->
 	</body>
-		<script type="text/javascript" src="js/lib/ie10-viewport-bug-workaround.js" ></script>
+		<script type="text/javascript" src="app/js/lib/ie10-viewport-bug-workaround.js" ></script>
 		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 		<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script type="text/javascript" src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="app/js/index.min.js"></script>
 </html>
