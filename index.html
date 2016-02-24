@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" manifest="app/cache.manifest">
+<html lang="zh-CN" manifest="cache.manefest">
 	<head>
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
       	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	    <![endif]-->
 	    <link rel="shortcut icon" type="image/x-icon" href="app/images/icon.gif" />
+	    <link rel="stylesheet" href="app/css/load3.css" />
 		<!-- 新 Bootstrap 核心 CSS 文件 -->
 		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<!-- 可选的Bootstrap主题文件（一般不用引入） -->
@@ -18,15 +19,22 @@
 		<link rel="stylesheet" href="app/css/justified-nav.css" />
 		<link rel="stylesheet" type="text/css" href="app/css/index.css"/>
 		<script>
-			window.applicationCache.addEventListener('updateready',function(e){
-			    if(window.applicationCache.status == window.applicationCache.UPDATEREADY){
-			        window.applicationCache.swapCache();
+			applicationCache.addEventListener('updateready', function(e){
+			    if(applicationCache.status == applicationCache.UPDATEREADY){
+			        applicationCache.swapCache();
+			        location.reload();
 			    }
-			},false);
+			}, false);
+			window.addEventListener("load", function() {
+				document.getElementById("loading").style.display="none";
+			}, false);
 		</script>
 	</head>
 
 	<body>
+	<div id="loading" class="mask load3">
+		<div class="loader">Loading...</div>
+	</div>
     <div class="container">
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
