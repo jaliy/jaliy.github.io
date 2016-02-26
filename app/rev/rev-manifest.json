@@ -1,3 +1,5 @@
 {
-  "index.js": "index-8572a4cffd.js"
+  "index.min.js": "index-3218f23329.min.js",
+  "note/index.min.js": "note/index-9f5bb89007.min.js",
+  "web/index.min.js": "web/index-39598ce27c.min.js"
 }
