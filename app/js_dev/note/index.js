@@ -2,7 +2,7 @@ var note={
 	init : function() {
 		this.envInit();
 		this.bind();
-		this.list();
+		this.renderList();
 	},
 	envInit : function() {
 		if(window.localStorage){
@@ -11,7 +11,7 @@ var note={
 			}
 		}
 	},
-	list : function() {
+	renderList : function() {
 		var notes = {
 			notes : JSON.parse(localStorage.notes)
 		};
@@ -52,7 +52,7 @@ var note={
 			title.value="";
 			content.value="";
 			$("#form").fadeToggle();
-			note.list();
+			note.renderList();
 		}
 	}
 };
