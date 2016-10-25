@@ -5,7 +5,11 @@ import routes from './routes';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+	
     mode: 'history',
+    
+	base: '/noteapp/',
+	
     // （缩写）相当于 routes: routes
     routes
 });

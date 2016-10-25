@@ -28,13 +28,17 @@ webpackJsonp([0,4],[
 	_vue2.default.use(_vueRouter2.default);
 
 	var router = new _vueRouter2.default({
-	    mode: 'history',
-	    // （缩写）相当于 routes: routes
-	    routes: _routes2.default
+
+	   mode: 'history',
+
+	   base: '/noteapp/',
+
+	   // （缩写）相当于 routes: routes
+	   routes: _routes2.default
 	});
 
 	var app = new _vue2.default({
-	    router: router
+	   router: router
 	}).$mount('#app');
 
 /***/ },
