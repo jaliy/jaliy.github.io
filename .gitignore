@@ -12,3 +12,6 @@
 hs_err_pid*
 /node_modules
 /.project
+/noteapp/.project
+/noteapp/node_modules
+/unpackage
