@@ -1,7 +1,8 @@
 {
 	"articles":[
 	    {"title":"程序猿、攻城狮","description":"如果问题，请多指教！","url":"https://github.com/jaliy"},
+		{"title":"Vue + Vue-Router + Webpack学习入门（一、整合）","description":"刚开始学习Vue，使用webpack打包，一点一点手动配置起来，有待完善。","url":"https://github.com/jaliy/noteapp"},
 		{"title":"jQuery图片懒加载插件 - j-lazyload","description":"一个简单的懒加载插件，基于jQuery实现，压缩后大小仅有3kb","url":"https://github.com/jaliy/j-lazyload"},
-		{"title":"Vue + Vue-Router + Webpack学习入门（一、整合）","description":"刚开始学习Vue，使用webpack打包，一点一点手动配置起来，有待完善。","url":"https://github.com/jaliy/noteapp"}
+		{"title":"Angular入门学习","description":"Angularjs1.x和Angular自带的路由学习，用到了mui，可以打包成app，哈哈，","url":"http://jaliy.github.io/Setting"}
 	]
 }
