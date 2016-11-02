@@ -8,7 +8,7 @@ module.exports = {
         path: __dirname + "/dist",
         filename: "build.js",
         chunkFilename: "[id].build.js",
-        publicPath: "http://localhost:8080/noteapp/dist/",
+        publicPath: "/noteapp/2-less-simplecomponent/dist/",
     },
     module: {
   		loaders: [{
@@ -19,24 +19,26 @@ module.exports = {
 	    			presets: ['es2015']
 	  			}
 			},
-			{
-	    		test: /\.less$/,
-	    		loader: "style!css!less"
-	      	},
 	      	{
 	        	test: /\.vue$/,
 	        	loader: 'vue'
-      		}
+      		},
+	      	{
+	            test: /\.less$/,
+	            loader: ExtractTextPlugin.extract(
+	                'style-loader', 'css-loader','less-loader')
+	        }, {
+	            test: /\.css$/,
+	            loader: ExtractTextPlugin.extract(
+	                'style-loader', 'css-loader')
+	        }
 		]
 	},
     plugins: [
     	// 提公用js到common.js文件中
     	new webpack.optimize.CommonsChunkPlugin('common.js'),
-	    // 将样式统一发布到style.css中
-	    new ExtractTextPlugin('style.css', {
-	        allChunks: true,
-	        disable: false
-	    }),
+	    // 将样式统一发布到style.css中(注意后面的参数必须要加上)
+	    new ExtractTextPlugin('style.css', {allChunks: true})
     ],
     resolve: {
         // require时省略的扩展名，如：require('module') 不需要module.js
