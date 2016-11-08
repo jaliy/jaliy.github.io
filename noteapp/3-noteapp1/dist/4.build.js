@@ -622,7 +622,7 @@ webpackJsonp([4,5],[
 
 
 	// module
-	exports.push([module.id, "\n.rtext {\n  padding: .2rem;\n  position: absolute;\n  left: 0;\n  top: 0;\n  padding-top: .8rem;\n  padding-bottom: 1rem;\n  width: 100%;\n  height: 100%;\n}\n.toolbar {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 1rem;\n}\n.toolbar ul {\n  height: 1rem;\n}\n.toolbar ul .tople {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  float: left;\n  width: 50%;\n  border-left: 1px solid #fff;\n}\n.toolbar ul .tople:first-child {\n  border-left: none;\n}\n.toolbar ul .tople a {\n  height: 1rem;\n  line-height: 1rem;\n  display: block;\n  font-size: .4rem;\n  text-align: center;\n  color: #fff;\n  background-color: #42B983;\n}\n", ""]);
+	exports.push([module.id, "\n.rtext {\n  padding: .2rem;\n  position: absolute;\n  left: 0;\n  top: 0;\n  padding-top: .8rem;\n  padding-bottom: .8rem;\n  width: 100%;\n  height: 100%;\n  -webkit-user-select: auto;\n}\n.toolbar {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 0.8rem;\n}\n.toolbar ul {\n  height: 0.8rem;\n}\n.toolbar ul .tople {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  float: left;\n  width: 50%;\n  border-left: 1px solid #fff;\n}\n.toolbar ul .tople:first-child {\n  border-left: none;\n}\n.toolbar ul .tople a {\n  height: 0.8rem;\n  line-height: 0.8rem;\n  display: block;\n  font-size: .4rem;\n  text-align: center;\n  color: #fff;\n  background-color: #42B983;\n}\n", ""]);
 
 	// exports
 

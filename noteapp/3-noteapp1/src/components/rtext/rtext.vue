@@ -12,16 +12,17 @@
 <style lang="less">
 	@import "../../less/_var.less";
 	
-	@h-toolbar:1rem;
+	@h-toolbar:.8rem;
 	.rtext {
 		padding: .2rem;
 		position: absolute;
 		left: 0;
 		top: 0;
 		padding-top: .8rem;
-		padding-bottom: 1rem;
+		padding-bottom: .8rem;
 		width: 100%;
 		height: 100%;
+		-webkit-user-select: auto;
 	}
 	.toolbar {
 		position: absolute;
