@@ -196,6 +196,19 @@ html {
 .page-home {
   font-size: .4rem;
 }
+.page-home .list {
+  margin-bottom: 1rem;
+}
+.page-home .list li {
+  padding: 0.1rem;
+  border-bottom: 1px solid #ddd;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.page-home .list .link {
+  display: block;
+  color: #333;
+}
 .r1 {
   padding: 40px 0;
   background: yellow;

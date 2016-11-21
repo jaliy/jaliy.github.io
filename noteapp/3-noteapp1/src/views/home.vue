@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<div class="page-home">
 		<nv-head :is-sub-nav="false" title="首页"></nv-head>
-		<div class="nav">
-			<router-link to="r1">Go to r1</router-link> | 
-			<router-link to="r2">Go to r2</router-link>
+		<div class="list">
+			<ul>
+				<li v-for="l in list"><router-link class="link" :to="{name:'detail',params:{id:l.id}}">{{l.title}}</router-link></li>
+			</ul>
 		</div>
-		<div class="page-home">This is from <span>Home</span>!</div>
 		<menu-button></menu-button>
 	</div>
 </template>
@@ -15,16 +15,20 @@
 	require("../less/home.less");
 	
 	import HTML5Storage from '../lib/Storage/html5';
-	
 	let sto = new HTML5Storage();
 	
 	export default {
+		data() {
+			return {
+				list:[]
+			}
+		},
 		components : {
 			nvHead : require("../components/header.vue"),
 			menuButton: require("../components/menubutton.vue")
 		},
 		mounted() {
-			sto.insertOne();
+			this.list = sto.findAll().reverse();
 		}
 	}
 </script>

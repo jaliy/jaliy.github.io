@@ -1,6 +1,6 @@
 <template>
 	<header class="head">
-		<a v-if="isSubNav" class="btn-back" v-on:click="goHome" href="javascript:;">&lt;</a>
+		<a v-if="isSubNav" class="btn-back" @click="goHome" href="javascript:;">&lt;</a>
 		<h1>{{title}}</h1>
 	</header>
 </template>

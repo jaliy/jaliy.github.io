@@ -1,5 +1,5 @@
 <template>
-	<div class="menu-buttons" contenteditable="true">
+	<div class="menu-buttons">
 		<ul>
 			<li><a @click="createNote" href="javascript:;">新建笔记</a></li>
 		</ul>

@@ -1,4 +1,4 @@
-webpackJsonp([1,5],[
+webpackJsonp([1,6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -82,12 +82,18 @@ webpackJsonp([1,5],[
 	var sto = new _html2.default();
 
 	exports.default = {
+		data: function data() {
+			return {
+				list: []
+			};
+		},
+
 		components: {
 			nvHead: __webpack_require__(15),
 			menuButton: __webpack_require__(22)
 		},
 		mounted: function mounted() {
-			sto.insertOne();
+			this.list = sto.findAll().reverse();
 		}
 	};
 
@@ -130,17 +136,49 @@ webpackJsonp([1,5],[
 			key: 'insertOne',
 			value: function insertOne(record) {
 				var id = _get(HTML5Storage.prototype.__proto__ || Object.getPrototypeOf(HTML5Storage.prototype), '_getKey', this).call(this);
-				console.log(id);
+				record['id'] = id;
+				var notes = this.findAll();
+				notes.push(record);
+
+				_get(HTML5Storage.prototype.__proto__ || Object.getPrototypeOf(HTML5Storage.prototype), '_sync', this).call(this, notes);
+
+				return id;
+			}
+		}, {
+			key: 'updateOne',
+			value: function updateOne(record) {
+				var records = this.findAll();
+
+				for (var i = 0; i < records.length; i++) {
+					if (records[i].id === record.id) {
+						Object.assign(records[i], record);
+						_get(HTML5Storage.prototype.__proto__ || Object.getPrototypeOf(HTML5Storage.prototype), '_sync', this).call(this, records);
+						return true;
+					}
+				}
+				return false;
 			}
 		}, {
 			key: 'deleteOne',
 			value: function deleteOne(idKey) {}
 		}, {
 			key: 'findAll',
-			value: function findAll() {}
+			value: function findAll() {
+				_get(HTML5Storage.prototype.__proto__ || Object.getPrototypeOf(HTML5Storage.prototype), '_init', this).call(this);
+				return JSON.parse(localStorage.notes);
+			}
 		}, {
 			key: 'findOne',
-			value: function findOne(idKey) {}
+			value: function findOne(idKey) {
+				var records = this.findAll();
+
+				for (var i = 0; i < records.length; i++) {
+					if (records[i].id === idKey) {
+						return records[i];
+					}
+				}
+				return null;
+			}
 		}]);
 
 		return HTML5Storage;
@@ -174,19 +212,47 @@ webpackJsonp([1,5],[
 
 			// implemented by sub-classes
 			value: function insertOne(record) {}
+			// implemented by sub-classes
+
+		}, {
+			key: 'updateOne',
+			value: function updateOne(record) {}
+			// implemented by sub-classes
+
 		}, {
 			key: 'deleteOne',
 			value: function deleteOne(idKey) {}
+			// implemented by sub-classes
+
+		}, {
+			key: 'findOne',
+			value: function findOne(idKey) {}
+			// implemented by sub-classes
+
+		}, {
+			key: 'updateOne',
+			value: function updateOne(idKey) {}
 		}, {
 			key: 'findAll',
 			value: function findAll() {}
 		}, {
-			key: 'findOne',
-			value: function findOne(idKey) {}
+			key: '_init',
+			value: function _init() {
+				//init
+				if (localStorage.notes === undefined) {
+					localStorage.notes = JSON.stringify([]);
+				}
+			}
 		}, {
 			key: '_getKey',
 			value: function _getKey() {
 				return uuid.v1();
+			}
+		}, {
+			key: '_sync',
+			value: function _sync(notes) {
+				this._init();
+				localStorage.notes = JSON.stringify(notes);
 			}
 		}]);
 
@@ -1047,10 +1113,7 @@ webpackJsonp([1,5],[
 
 	module.exports={render:function (){with(this) {
 	  return _h('div', {
-	    staticClass: "menu-buttons",
-	    attrs: {
-	      "contenteditable": "true"
-	    }
+	    staticClass: "menu-buttons"
 	  }, [_h('ul', [_h('li', [_h('a', {
 	    attrs: {
 	      "href": "javascript:;"
@@ -1072,27 +1135,29 @@ webpackJsonp([1,5],[
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){with(this) {
-	  return _h('div', [_h('nv-head', {
+	  return _h('div', {
+	    staticClass: "page-home"
+	  }, [_h('nv-head', {
 	    attrs: {
 	      "is-sub-nav": false,
 	      "title": "首页"
 	    }
 	  }), " ", _h('div', {
-	    staticClass: "nav"
-	  }, [_h('router-link', {
-	    attrs: {
-	      "to": "r1"
-	    }
-	  }, ["Go to r1"]), " | \n\t\t", _h('router-link', {
-	    attrs: {
-	      "to": "r2"
-	    }
-	  }, ["Go to r2"])]), " ", _m(0), " ", _h('menu-button')])
-	}},staticRenderFns: [function (){with(this) {
-	  return _h('div', {
-	    staticClass: "page-home"
-	  }, ["This is from ", _h('span', ["Home"]), "!"])
-	}}]}
+	    staticClass: "list"
+	  }, [_h('ul', [_l((list), function(l) {
+	    return _h('li', [_h('router-link', {
+	      staticClass: "link",
+	      attrs: {
+	        "to": {
+	          name: 'detail',
+	          params: {
+	            id: l.id
+	          }
+	        }
+	      }
+	    }, [_s(l.title)])])
+	  })])]), " ", _h('menu-button')])
+	}},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {

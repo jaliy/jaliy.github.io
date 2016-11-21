@@ -1,4 +1,4 @@
-webpackJsonp([0,5],{
+webpackJsonp([0,6],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
@@ -25,7 +25,7 @@ webpackJsonp([0,5],{
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _fastclick = __webpack_require__(43);
+	var _fastclick = __webpack_require__(47);
 
 	var _fastclick2 = _interopRequireDefault(_fastclick);
 
@@ -9508,6 +9508,14 @@ webpackJsonp([0,5],{
 	        });
 	    }
 	}, {
+	    path: '/detail/:id',
+	    name: 'detail',
+	    component: function component(resolve) {
+	        __webpack_require__.e/* nsure */(5, function () {
+	            resolve(__webpack_require__(41));
+	        });
+	    }
+	}, {
 	    path: '*',
 	    component: Home
 	}];
@@ -9516,7 +9524,7 @@ webpackJsonp([0,5],{
 
 /***/ },
 
-/***/ 43:
+/***/ 47:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {

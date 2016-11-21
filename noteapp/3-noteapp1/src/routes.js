@@ -35,7 +35,15 @@ const routes = [{
 	        resolve(require('./views/create.vue'));
 	    });
     }
-},{
+}, {
+    path: '/detail/:id',
+    name: 'detail',
+    component (resolve) {
+	    require.ensure(['./views/detail.vue'], () => {
+	        resolve(require('./views/detail.vue'));
+	    });
+    }
+}, {
 	path: '*',
 	component: Home
 }]
