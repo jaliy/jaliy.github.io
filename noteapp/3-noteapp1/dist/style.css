@@ -209,6 +209,11 @@ html {
   display: block;
   color: #333;
 }
+.page-home .list .empty {
+  padding: 2rem 0;
+  text-align: center;
+  color: #999;
+}
 .r1 {
   padding: 40px 0;
   background: yellow;

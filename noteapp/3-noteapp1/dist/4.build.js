@@ -996,7 +996,6 @@ webpackJsonp([4,6],[
 		},
 		methods: {
 			doSave: function doSave() {
-				debugger;
 				if (this.note.textValue === "" || this.note.title === "") {
 					return;
 				}

@@ -2,9 +2,12 @@
 	<div class="page-home">
 		<nv-head :is-sub-nav="false" title="首页"></nv-head>
 		<div class="list">
-			<ul>
+			<ul v-if="list.length>0">
 				<li v-for="l in list"><router-link class="link" :to="{name:'detail',params:{id:l.id}}">{{l.title}}</router-link></li>
 			</ul>
+			<div class="empty" v-if="list.length==0">
+				暂无
+			</div>
 		</div>
 		<menu-button></menu-button>
 	</div>

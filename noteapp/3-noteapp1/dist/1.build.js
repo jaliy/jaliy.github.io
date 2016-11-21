@@ -74,6 +74,9 @@ webpackJsonp([1,6],[
 	//
 	//
 	//
+	//
+	//
+	//
 
 	__webpack_require__(12);
 	__webpack_require__(13);
@@ -1144,7 +1147,7 @@ webpackJsonp([1,6],[
 	    }
 	  }), " ", _h('div', {
 	    staticClass: "list"
-	  }, [_h('ul', [_l((list), function(l) {
+	  }, [(list.length > 0) ? _h('ul', [_l((list), function(l) {
 	    return _h('li', [_h('router-link', {
 	      staticClass: "link",
 	      attrs: {
@@ -1156,7 +1159,9 @@ webpackJsonp([1,6],[
 	        }
 	      }
 	    }, [_s(l.title)])])
-	  })])]), " ", _h('menu-button')])
+	  })]) : _e(), " ", (list.length == 0) ? _h('div', {
+	    staticClass: "empty"
+	  }, ["\n\t\t\t暂无\n\t\t"]) : _e()]), " ", _h('menu-button')])
 	}},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

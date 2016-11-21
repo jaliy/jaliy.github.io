@@ -29,7 +29,6 @@
 		},
 		methods: {
 			doSave(){
-				debugger;
 				if(this.note.textValue==="" || this.note.title===""){
 					return ;
 				}
