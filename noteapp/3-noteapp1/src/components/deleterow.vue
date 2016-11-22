@@ -1,7 +1,14 @@
 <template>
-	<li class="row" @touchstart="onStart" @touchend="onEnd" v-bind:class="{transform: isRightToLeft&&deltaX>10}">
-		<p class="txt"><router-link class="link" :to="{name:'detail',params:{id:id}}">{{title}}</router-link></p>
-		<a class="btn-del" href="javascript:;" @touchstart.stop="onDelete" >删除</a>
+	<li class="row" 
+		@touchstart="onStart" 
+		@touchend.stop="onEnd" 
+		v-bind:class="{transform: isRightToLeft&&deltaX>10}">
+		<p class="txt">
+			<router-link class="link" 
+				:to="{name:'detail',params:{id:id}}" v-text="title"></router-link>
+		</p>
+		<a class="btn-del" href="javascript:;" 
+			@touchstart.stop="onDelete" >删除</a>
 	</li>
 </template>
 <style lang="less">
@@ -51,9 +58,12 @@
 </style>
 <script type="text/javascript">
     import $ from 'webpack-zepto';
+    import Toast from '../components/Toast';
     
 	import HTML5Storage from '../lib/Storage/html5';
 	let sto = new HTML5Storage();
+	
+	
 	export default {
 		props:{
 			title:{
@@ -87,6 +97,7 @@
 			onDelete(e) {
 				sto.deleteOne(this.id);
 				this.$parent.list = sto.findAll().reverse();
+				Toast("删除成功");
 			},
 			resetLi() {
 				$(this.$el).parent().find(".transform").removeClass("transform");

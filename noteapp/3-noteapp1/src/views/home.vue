@@ -4,9 +4,6 @@
 		<div class="list">
 			<ul v-if="list.length>0">
 				<delete-row v-for="l in list" :title="l.title" :id="l.id"></delete-row>
-				<!--
-				<li v-for="l in list"><router-link class="link" :to="{name:'detail',params:{id:l.id}}">{{l.title}}</router-link></li>
-				-->
 			</ul>
 			<div class="empty" v-if="list.length==0">
 				暂无笔记

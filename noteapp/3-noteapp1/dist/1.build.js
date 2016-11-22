@@ -14,7 +14,7 @@ webpackJsonp([1,6],[
 	__vue_exports__ = __webpack_require__(7)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(33)
+	var __vue_template__ = __webpack_require__(40)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -63,9 +63,6 @@ webpackJsonp([1,6],[
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	//
-	//
-	//
 	//
 	//
 	//
@@ -604,7 +601,7 @@ webpackJsonp([1,6],[
 
 
 	// module
-	exports.push([module.id, "/**less variable define*/\n/**stylesheet*/\n.head {\n  position: relative;\n  height: 0.8rem;\n  line-height: 0.8rem;\n  background: #42B983;\n  color: #fff;\n  z-index: 9999;\n}\n.head .btn-back {\n  position: absolute;\n  left: 0;\n  top: 0;\n  display: inline-block;\n  width: 1rem;\n  height: 0.8rem;\n  line-height: 0.8rem;\n  color: #fff;\n  font-weight: bold;\n  text-align: center;\n  font-size: .8rem;\n}\n.head h1 {\n  text-align: center;\n  font-size: 0.4rem;\n}\n", ""]);
+	exports.push([module.id, "/**less variable define*/\n/**stylesheet*/\n.head {\n  position: relative;\n  height: 0.8rem;\n  line-height: 0.8rem;\n  background: #42B983;\n  color: #fff;\n  z-index: 5;\n}\n.head .btn-back {\n  position: absolute;\n  left: 0;\n  top: 0;\n  display: inline-block;\n  width: 1rem;\n  height: 0.8rem;\n  line-height: 0.8rem;\n  color: #fff;\n  font-weight: bold;\n  text-align: center;\n  font-size: .8rem;\n}\n.head h1 {\n  text-align: center;\n  font-size: 0.4rem;\n}\n", ""]);
 
 	// exports
 
@@ -1055,7 +1052,7 @@ webpackJsonp([1,6],[
 
 
 	// module
-	exports.push([module.id, "\n.menu-buttons {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  z-index: 9999;\n}\n.menu-buttons ul {\n  height: 1rem;\n}\n.menu-buttons li {\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  /* Firefox */\n  -webkit-box-sizing: border-box;\n  /* Safari */\n  float: left;\n  width: 100%;\n  height: 1rem;\n  line-height: 1rem;\n  border-left: 1px solid #fff;\n  background-color: #42B983;\n}\n.menu-buttons li.first-child {\n  border-left: none;\n}\n.menu-buttons li a {\n  font-size: .32rem;\n  font-weight: bold;\n  text-align: center;\n  display: block;\n  color: #fff;\n}\n.menu-buttons li a:before {\n  content: '+';\n  font-size: .4rem;\n}\n", ""]);
+	exports.push([module.id, "\n.menu-buttons {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  z-index: 5;\n}\n.menu-buttons ul {\n  height: 1rem;\n}\n.menu-buttons li {\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  /* Firefox */\n  -webkit-box-sizing: border-box;\n  /* Safari */\n  float: left;\n  width: 100%;\n  height: 1rem;\n  line-height: 1rem;\n  border-left: 1px solid #fff;\n  background-color: #42B983;\n}\n.menu-buttons li.first-child {\n  border-left: none;\n}\n.menu-buttons li a {\n  font-size: .32rem;\n  font-weight: bold;\n  text-align: center;\n  display: block;\n  color: #fff;\n}\n.menu-buttons li a:before {\n  content: '+';\n  font-size: .4rem;\n}\n", ""]);
 
 	// exports
 
@@ -1159,7 +1156,7 @@ webpackJsonp([1,6],[
 	__vue_exports__ = __webpack_require__(30)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(32)
+	var __vue_template__ = __webpack_require__(39)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1246,12 +1243,23 @@ webpackJsonp([1,6],[
 
 	var _webpackZepto2 = _interopRequireDefault(_webpackZepto);
 
+	var _Toast = __webpack_require__(32);
+
+	var _Toast2 = _interopRequireDefault(_Toast);
+
 	var _html = __webpack_require__(8);
 
 	var _html2 = _interopRequireDefault(_html);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var sto = new _html2.default(); //
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -1304,7 +1312,6 @@ webpackJsonp([1,6],[
 	//
 	//
 
-	var sto = new _html2.default();
 	exports.default = {
 		props: {
 			title: {
@@ -1339,6 +1346,7 @@ webpackJsonp([1,6],[
 			onDelete: function onDelete(e) {
 				sto.deleteOne(this.id);
 				this.$parent.list = sto.findAll().reverse();
+				(0, _Toast2.default)("删除成功");
 			},
 			resetLi: function resetLi() {
 				(0, _webpackZepto2.default)(this.$el).parent().find(".transform").removeClass("transform");
@@ -2945,6 +2953,233 @@ webpackJsonp([1,6],[
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	var _toast = __webpack_require__(33);
+
+	var _toast2 = _interopRequireDefault(_toast);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = _toast2.default;
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _vue = __webpack_require__(3);
+
+	var _vue2 = _interopRequireDefault(_vue);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ToastVue = _vue2.default.extend(__webpack_require__(34));
+
+	var Toast = function Toast() {
+		var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+		var duration = options.duration || 1500;
+
+		var ins = new ToastVue({
+			el: document.createElement("div")
+		});
+		ins.message = typeof options === 'string' ? options : options.message;
+		document.body.appendChild(ins.$el);
+
+		_vue2.default.nextTick(function () {
+			ins.visible = true;
+
+			ins.timer = setTimeout(function () {
+				ins.visible = false;
+			}, duration);
+		});
+	};
+
+	exports.default = Toast;
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+
+	/* styles */
+	__webpack_require__(35)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(37)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(38)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "E:\\github\\noteapp\\3-noteapp1\\src\\components\\Toast\\src\\toast.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-8540c4e2"
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-8540c4e2", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-8540c4e2", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] toast.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(36);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(19)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-8540c4e2&scoped=true!./../../../../node_modules/less-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./toast.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-8540c4e2&scoped=true!./../../../../node_modules/less-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./toast.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(18)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.fade-enter-active[data-v-8540c4e2],\n.fade-leave-active[data-v-8540c4e2] {\n  transition: opacity 50;\n}\n.fade-enter[data-v-8540c4e2],\n.fade-leave-active[data-v-8540c4e2] {\n  opacity: 0;\n}\n.ui-alert[data-v-8540c4e2] {\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n.ui-alert .ui-msg[data-v-8540c4e2] {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n  transform: translate3d(-50%, -50%, 0);\n  padding: .2rem .4rem;\n  z-index: 1001;\n  background-color: #000;\n  opacity: .4;\n  border-radius: 3px;\n  text-overflow: ellipsis;\n  word-break: break-word;\n  text-align: center;\n  font-size: .4rem;\n  color: #fff;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+		props: {
+			message: String
+		},
+		data: function data() {
+			return {
+				visible: false
+			};
+		}
+	};
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){with(this) {
+	  return _h('transition', {
+	    attrs: {
+	      "name": "fade"
+	    }
+	  }, [_h('div', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (visible),
+	      expression: "visible"
+	    }],
+	    staticClass: "ui-alert"
+	  }, [_h('div', {
+	    staticClass: "ui-msg"
+	  }, [_s(message)])])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-8540c4e2", module.exports)
+	  }
+	}
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
 	module.exports={render:function (){with(this) {
 	  return _h('li', {
 	    staticClass: "row",
@@ -2953,7 +3188,10 @@ webpackJsonp([1,6],[
 	    },
 	    on: {
 	      "touchstart": onStart,
-	      "touchend": onEnd
+	      "touchend": function($event) {
+	        $event.stopPropagation();
+	        onEnd($event)
+	      }
 	    }
 	  }, [_h('p', {
 	    staticClass: "txt"
@@ -2966,8 +3204,11 @@ webpackJsonp([1,6],[
 	          id: id
 	        }
 	      }
+	    },
+	    domProps: {
+	      "textContent": _s(title)
 	    }
-	  }, [_s(title)])]), " ", _h('a', {
+	  })]), " ", _h('a', {
 	    staticClass: "btn-del",
 	    attrs: {
 	      "href": "javascript:;"
@@ -2988,7 +3229,7 @@ webpackJsonp([1,6],[
 	}
 
 /***/ },
-/* 33 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){with(this) {
@@ -3008,7 +3249,7 @@ webpackJsonp([1,6],[
 	        "id": l.id
 	      }
 	    })
-	  }), " "]) : _e(), " ", (list.length == 0) ? _h('div', {
+	  })]) : _e(), " ", (list.length == 0) ? _h('div', {
 	    staticClass: "empty"
 	  }, ["\n\t\t\t暂无笔记\n\t\t"]) : _e()]), " ", _h('menu-button')])
 	}},staticRenderFns: []}
