@@ -37,6 +37,9 @@ let Message = (options = {}) => {
 }
 
 let alert = (options = {}) => {
+    let title = options.title || "提示";
+    let message = typeof options === 'string' ? options : options.message;
+    
 	return new Message(Object.assign({
 		isConfirm:false
 	}, {
