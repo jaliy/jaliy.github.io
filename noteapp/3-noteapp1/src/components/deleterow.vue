@@ -59,6 +59,7 @@
 <script type="text/javascript">
     import $ from 'webpack-zepto';
     import Toast from '../components/Toast';
+    import alert, {confirm} from '../components/Box';
     
 	import HTML5Storage from '../lib/Storage/html5';
 	let sto = new HTML5Storage();
@@ -95,9 +96,13 @@
 				this.deltaY = Math.abs(e.changedTouches[0].clientY - this.startY);
 			},
 			onDelete(e) {
-				sto.deleteOne(this.id);
-				this.$parent.list = sto.findAll().reverse();
-				Toast("删除成功");
+				confirm("确认删除？").then((res) => {
+					if(res) {
+						sto.deleteOne(this.id);
+						this.$parent.list = sto.findAll().reverse();
+						Toast("删除成功");
+					}
+				});
 			},
 			resetLi() {
 				$(this.$el).parent().find(".transform").removeClass("transform");

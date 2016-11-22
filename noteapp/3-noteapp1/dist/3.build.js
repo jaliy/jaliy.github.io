@@ -458,16 +458,16 @@ webpackJsonp([3,6],{
 
 /***/ },
 
-/***/ 45:
+/***/ 52:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 
 	/* script */
-	__vue_exports__ = __webpack_require__(46)
+	__vue_exports__ = __webpack_require__(53)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(48)
+	var __vue_template__ = __webpack_require__(55)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -502,7 +502,7 @@ webpackJsonp([3,6],{
 
 /***/ },
 
-/***/ 46:
+/***/ 53:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -517,7 +517,7 @@ webpackJsonp([3,6],{
 	//
 	//
 
-	__webpack_require__(47);
+	__webpack_require__(54);
 
 	exports.default = {
 		components: {
@@ -527,14 +527,14 @@ webpackJsonp([3,6],{
 
 /***/ },
 
-/***/ 47:
+/***/ 54:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 48:
+/***/ 55:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){with(this) {

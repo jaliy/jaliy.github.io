@@ -10,7 +10,7 @@
 </template>
 <script type="text/javascript">
 	
-    import Alert from '../components/Alert';
+    import alert,{confirm} from '../components/Box';
 	import HTML5Storage from '../lib/Storage/html5';
 	
 	let sto = new HTML5Storage();
@@ -42,7 +42,7 @@
 					sto.updateOne(this.note);
 					msg = "更新成功！";
 				}
-				Alert(msg).then(() => {
+				alert(msg).then(() => {
 					this.$router.push("home");
 				});
 			}
