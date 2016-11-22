@@ -69,7 +69,16 @@ webpackJsonp([4,6],[
 			}
 		}, {
 			key: 'deleteOne',
-			value: function deleteOne(idKey) {}
+			value: function deleteOne(idKey) {
+				var records = this.findAll();
+				for (var i = 0; i < records.length; i++) {
+					if (records[i].id === idKey) {
+						records.splice(i, 1);
+						_get(HTML5Storage.prototype.__proto__ || Object.getPrototypeOf(HTML5Storage.prototype), '_sync', this).call(this, records);
+					}
+				}
+				return true;
+			}
 		}, {
 			key: 'findAll',
 			value: function findAll() {
@@ -867,19 +876,25 @@ webpackJsonp([4,6],[
 /* 33 */,
 /* 34 */,
 /* 35 */,
-/* 36 */
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 
 	/* styles */
-	__webpack_require__(37)
+	__webpack_require__(43)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(39)
+	__vue_exports__ = __webpack_require__(45)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(40)
+	var __vue_template__ = __webpack_require__(46)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -913,13 +928,13 @@ webpackJsonp([4,6],[
 
 
 /***/ },
-/* 37 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(38);
+	var content = __webpack_require__(44);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(19)(content, {});
@@ -939,7 +954,7 @@ webpackJsonp([4,6],[
 	}
 
 /***/ },
-/* 38 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(18)();
@@ -953,7 +968,7 @@ webpackJsonp([4,6],[
 
 
 /***/ },
-/* 39 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1013,7 +1028,7 @@ webpackJsonp([4,6],[
 	};
 
 /***/ },
-/* 40 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){with(this) {

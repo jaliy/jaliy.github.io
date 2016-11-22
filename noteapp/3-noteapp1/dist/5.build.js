@@ -69,7 +69,16 @@ webpackJsonp([5,6],[
 			}
 		}, {
 			key: 'deleteOne',
-			value: function deleteOne(idKey) {}
+			value: function deleteOne(idKey) {
+				var records = this.findAll();
+				for (var i = 0; i < records.length; i++) {
+					if (records[i].id === idKey) {
+						records.splice(i, 1);
+						_get(HTML5Storage.prototype.__proto__ || Object.getPrototypeOf(HTML5Storage.prototype), '_sync', this).call(this, records);
+					}
+				}
+				return true;
+			}
 		}, {
 			key: 'findAll',
 			value: function findAll() {
@@ -1039,19 +1048,25 @@ webpackJsonp([5,6],[
 /* 38 */,
 /* 39 */,
 /* 40 */,
-/* 41 */
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 
 	/* styles */
-	__webpack_require__(42)
+	__webpack_require__(48)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(44)
+	__vue_exports__ = __webpack_require__(50)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(46)
+	var __vue_template__ = __webpack_require__(52)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1085,13 +1100,13 @@ webpackJsonp([5,6],[
 
 
 /***/ },
-/* 42 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(43);
+	var content = __webpack_require__(49);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(19)(content, {});
@@ -1111,7 +1126,7 @@ webpackJsonp([5,6],[
 	}
 
 /***/ },
-/* 43 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(18)();
@@ -1125,7 +1140,7 @@ webpackJsonp([5,6],[
 
 
 /***/ },
-/* 44 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1138,7 +1153,7 @@ webpackJsonp([5,6],[
 
 	var _html2 = _interopRequireDefault(_html);
 
-	var _util = __webpack_require__(45);
+	var _util = __webpack_require__(51);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -1192,7 +1207,7 @@ webpackJsonp([5,6],[
 	};
 
 /***/ },
-/* 45 */
+/* 51 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1210,7 +1225,7 @@ webpackJsonp([5,6],[
 	};
 
 /***/ },
-/* 46 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){with(this) {

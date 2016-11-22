@@ -25,7 +25,7 @@ webpackJsonp([0,6],{
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _fastclick = __webpack_require__(47);
+	var _fastclick = __webpack_require__(53);
 
 	var _fastclick2 = _interopRequireDefault(_fastclick);
 
@@ -9488,7 +9488,7 @@ webpackJsonp([0,6],{
 	    name: 'r1',
 	    component: function component(resolve) {
 	        __webpack_require__.e/* nsure */(2, function () {
-	            resolve(__webpack_require__(28));
+	            resolve(__webpack_require__(34));
 	        });
 	    }
 	}, {
@@ -9496,7 +9496,7 @@ webpackJsonp([0,6],{
 	    name: 'r2',
 	    component: function component(resolve) {
 	        __webpack_require__.e/* nsure */(3, function () {
-	            resolve(__webpack_require__(32));
+	            resolve(__webpack_require__(38));
 	        });
 	    }
 	}, {
@@ -9504,7 +9504,7 @@ webpackJsonp([0,6],{
 	    name: 'create',
 	    component: function component(resolve) {
 	        __webpack_require__.e/* nsure */(4, function () {
-	            resolve(__webpack_require__(36));
+	            resolve(__webpack_require__(42));
 	        });
 	    }
 	}, {
@@ -9512,7 +9512,7 @@ webpackJsonp([0,6],{
 	    name: 'detail',
 	    component: function component(resolve) {
 	        __webpack_require__.e/* nsure */(5, function () {
-	            resolve(__webpack_require__(41));
+	            resolve(__webpack_require__(47));
 	        });
 	    }
 	}, {
@@ -9524,7 +9524,7 @@ webpackJsonp([0,6],{
 
 /***/ },
 
-/***/ 47:
+/***/ 53:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
