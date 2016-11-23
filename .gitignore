@@ -15,3 +15,4 @@ hs_err_pid*
 /noteapp/.project
 /noteapp/node_modules
 /unpackage
+/noteapp/1-combine/node_modules
