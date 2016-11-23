@@ -1,8 +1,7 @@
 <template>
 	<div>
-		<nv-head :is-sub-nav="true" title="新建笔记"></nv-head>
+		<nv-head :is-sub-nav="true" v-bind:title="title"></nv-head>
 		<article class="detail">
-			<h1 v-text="title"></h1>
 			<div class="content" v-html="value">
 			</div>
 		</article>

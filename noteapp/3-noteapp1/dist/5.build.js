@@ -1213,7 +1213,6 @@ webpackJsonp([5,6],[
 	//
 	//
 	//
-	//
 
 	var sto = new _html2.default();
 
@@ -1264,15 +1263,11 @@ webpackJsonp([5,6],[
 	  return _h('div', [_h('nv-head', {
 	    attrs: {
 	      "is-sub-nav": true,
-	      "title": "新建笔记"
+	      "title": title
 	    }
 	  }), " ", _h('article', {
 	    staticClass: "detail"
-	  }, [_h('h1', {
-	    domProps: {
-	      "textContent": _s(title)
-	    }
-	  }), " ", _h('div', {
+	  }, [_h('div', {
 	    staticClass: "content",
 	    domProps: {
 	      "innerHTML": _s(value)
