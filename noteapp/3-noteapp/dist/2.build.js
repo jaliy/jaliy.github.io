@@ -1,4 +1,4 @@
-webpackJsonp([3,6],{
+webpackJsonp([2,6],{
 
 /***/ 15:
 /***/ function(module, exports, __webpack_require__) {
@@ -24,7 +24,7 @@ webpackJsonp([3,6],{
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\github\\noteapp\\3-noteapp1\\src\\components\\header.vue"
+	__vue_options__.__file = "E:\\github\\noteapp\\3-noteapp\\src\\components\\header.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -35,9 +35,9 @@ webpackJsonp([3,6],{
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-1ade96b0", __vue_options__)
+	    hotAPI.createRecord("data-v-247058f7", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-1ade96b0", __vue_options__)
+	    hotAPI.reload("data-v-247058f7", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] header.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -62,8 +62,8 @@ webpackJsonp([3,6],{
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1ade96b0!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1ade96b0!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-247058f7!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-247058f7!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./header.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -468,22 +468,22 @@ webpackJsonp([3,6],{
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-1ade96b0", module.exports)
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-247058f7", module.exports)
 	  }
 	}
 
 /***/ },
 
-/***/ 52:
+/***/ 48:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 
 	/* script */
-	__vue_exports__ = __webpack_require__(53)
+	__vue_exports__ = __webpack_require__(49)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(55)
+	var __vue_template__ = __webpack_require__(51)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -495,7 +495,7 @@ webpackJsonp([3,6],{
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "E:\\github\\noteapp\\3-noteapp1\\src\\views\\r2.vue"
+	__vue_options__.__file = "E:\\github\\noteapp\\3-noteapp\\src\\views\\r1.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -506,19 +506,19 @@ webpackJsonp([3,6],{
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-2b044ba9", __vue_options__)
+	    hotAPI.createRecord("data-v-4c70aaf9", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-2b044ba9", __vue_options__)
+	    hotAPI.reload("data-v-4c70aaf9", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] r2.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] r1.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 
 	module.exports = __vue_exports__
 
 
 /***/ },
 
-/***/ 53:
+/***/ 49:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -533,8 +533,7 @@ webpackJsonp([3,6],{
 	//
 	//
 
-	__webpack_require__(54);
-
+	__webpack_require__(50);
 	exports.default = {
 		components: {
 			nvHead: __webpack_require__(15)
@@ -543,32 +542,32 @@ webpackJsonp([3,6],{
 
 /***/ },
 
-/***/ 54:
+/***/ 50:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 55:
+/***/ 51:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){with(this) {
 	  return _h('div', [_h('nv-head', {
 	    attrs: {
 	      "is-sub-nav": true,
-	      "title": "Route 2"
+	      "title": "Router 1"
 	    }
 	  }), " ", _m(0)])
 	}},staticRenderFns: [function (){with(this) {
 	  return _h('div', {
-	    staticClass: "r2"
-	  }, ["this is from Route 2"])
+	    staticClass: "r1"
+	  }, ["this is from Route 1"])
 	}}]}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-2b044ba9", module.exports)
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-4c70aaf9", module.exports)
 	  }
 	}
 

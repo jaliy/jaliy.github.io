@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<nv-head :is-sub-nav="true" v-bind:title="title"></nv-head>
+		<nv-head :is-sub-nav="true" :title="title"></nv-head>
 		<article class="detail">
 			<div class="content" v-html="value">
 			</div>
