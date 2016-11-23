@@ -2,8 +2,8 @@
 	<div>
 		<nv-head :is-sub-nav="true" title="新建笔记"></nv-head>
 		<article class="detail">
-			<h1>{{note.title}}</h1>
-			<div class="content" v-html="note.textValue">
+			<h1 v-text="title"></h1>
+			<div class="content" v-html="value">
 			</div>
 		</article>
 	</div>
@@ -11,6 +11,7 @@
 <style lang="less">
 	.detail {
 		padding: .1rem;
+        padding-top: .9rem;
 		h1{
 			font-size: .36rem;
 			text-align: center;
@@ -32,7 +33,8 @@
 	export default {
 		data() {
 			return {
-				note:null
+				title: "",
+				value: ""
 			}
 		},
 		components : {
@@ -43,7 +45,7 @@
 			let note = sto.findOne(to.params.id);
 			note.textValue = note.textValue.replace(/\n|\r/g,"<br />");
 			next(vm => {
-	          	vm.note = note
+	          	vm.title = note.title, vm.value = note.textValue;
 	        });
 		}
 	}
