@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>AA player</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+		<link rel="stylesheet" type="text/css" href="css/aa-player.min.css"/>
+		<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/SyntaxHighlighter/3.0.83/styles/shCore.min.css"/>
+		<link rel="stylesheet" href="//cdn.bootcss.com/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css" />
+		<style type="text/css">
+			*{padding: 0;margin: 0;font-family: "微软雅黑";}
+			html {
+			    font-size : 100px;
+			    background-color: #fafafa;
+			}
+			@media screen and (max-width: 800px) {
+			    html {
+			        font-size:50px
+			    }
+			}
+			h1{font-size: 0.32rem;margin-top: .4rem;margin-bottom: .4rem;text-align: center;}
+			.wrapper{width:6.4rem;height: 4.8rem;margin: 0 auto;}
+			.buttons{width: 4rem;margin:0 auto;}
+			.buttons button{padding: .2rem .5rem;background-color: #42B983;border:none;outline: none;color: #fff;font-size: .32rem;}
+			pre{width:6.4rem;font-size: .12rem;margin:0 auto;}
+		</style>
+	</head>
+	<body>
+		<h1>AAPlayer示例</h1>
+		<div class="wrapper">
+		</div>
+		<div class="buttons">
+			<button>停止</button>
+			<button>播放</button>
+		</div>
+		
+		<pre class="brush: javascript;">
+			var player = new AAPlayer({
+				el:document.querySelector(".wrapper"),
+				src:"http://www.high666.com/ice-age.mp4",
+				width:"6.4rem",
+				height:"4.8rem",
+				autoplay:true
+			});
+		</pre>
+		<script src="//cdn.bootcss.com/SyntaxHighlighter/3.0.83/scripts/shCore.js"></script>
+		<script src="//cdn.bootcss.com/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js"></script>
+		<script src="js/aa-player.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		var player = new AAPlayer({
+			el:document.querySelector(".wrapper"),
+			src:"http://www.high666.com/ice-age.mp4",
+			width:"6.4rem",
+			height:"4.8rem",
+			autoplay:true
+		});
+    	SyntaxHighlighter.all(); 
+		</script>
+	</body>
+</html>
