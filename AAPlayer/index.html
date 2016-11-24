@@ -30,10 +30,9 @@
 		<div class="wrapper">
 		</div>
 		<div class="buttons">
-			<button>停止</button>
-			<button>播放</button>
+			<button id="J_stop">停止</button>
+			<button id="J_play">播放</button>
 		</div>
-		
 		<pre class="brush: javascript;">
 			var player = new AAPlayer({
 				el:document.querySelector(".wrapper"),
@@ -47,14 +46,29 @@
 		<script src="//cdn.bootcss.com/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js"></script>
 		<script src="js/aa-player.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-		var player = new AAPlayer({
-			el:document.querySelector(".wrapper"),
-			src:"http://www.high666.com/ice-age.mp4",
-			width:"6.4rem",
-			height:"4.8rem",
-			autoplay:true
-		});
-    	SyntaxHighlighter.all(); 
+		(function() {
+	    	
+	    	
+	    	
+	    	document.addEventListener("DOMContentLoaded", function() {
+				var player = new AAPlayer({
+					el:document.querySelector(".wrapper"),
+					src:"http://www.high666.com/ice-age.mp4",
+					width:"6.4rem",
+					height:"4.8rem",
+					autoplay:true
+				});
+		    	SyntaxHighlighter.all();
+		    	
+		    	document.getElementById("J_play").addEventListener("click", function() {
+		    		player.play();
+		    	},false);
+		    	document.getElementById("J_stop").addEventListener("click", function() {
+		    		player.pause();
+		    	},false);
+		    	
+	    	}, false);
+		})();
 		</script>
 	</body>
 </html>
