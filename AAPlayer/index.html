@@ -9,53 +9,45 @@
 		<link rel="stylesheet" href="//cdn.bootcss.com/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css" />
 		<style type="text/css">
 			*{padding: 0;margin: 0;font-family: "微软雅黑";}
-			html {
-			    font-size : 100px;
-			    background-color: #fafafa;
-			}
-			@media screen and (max-width: 800px) {
-			    html {
-			        font-size:50px
-			    }
-			}
-			h1{font-size: 0.32rem;margin-top: .4rem;margin-bottom: .4rem;text-align: center;}
-			.wrapper{width:6.4rem;height: 4.8rem;margin: 0 auto;}
-			.buttons{width: 4rem;margin:0 auto;}
-			.buttons button{padding: .2rem .5rem;background-color: #42B983;border:none;outline: none;color: #fff;font-size: .32rem;}
-			pre{width:6.4rem;font-size: .12rem;margin:0 auto;}
+			html{background-color: #fafafa;}
+			h1{font-size: 32px;margin-top: 40px;margin-bottom: 40px;text-align: center;}
+			.wrapper{width:640px;height: 480px;margin: 0 auto 10px;}
+			.buttons{width: 400px;margin:0 auto;}
+			.buttons button{padding: 8px 16px;background-color: #42B983;border:none;outline: none;color: #fff;font-size:16px;}
+			pre{width:640px;font-size: 12px;margin:0 auto;}
 		</style>
 	</head>
 	<body>
 		<h1>AAPlayer示例</h1>
-		<div class="wrapper">
-		</div>
+		<div id="aaplayer" class="wrapper"></div>
 		<div class="buttons">
 			<button id="J_stop">停止</button>
 			<button id="J_play">播放</button>
 		</div>
-		<pre class="brush: javascript;">
-			var player = new AAPlayer({
-				el:document.querySelector(".wrapper"),
-				src:"http://www.high666.com/ice-age.mp4",
-				width:"6.4rem",
-				height:"4.8rem",
-				autoplay:true
-			});
-		</pre>
+		
+		<div class="wrapper">
+			<pre class="brush: javascript;">
+				var player = new AAPlayer({
+					el:document.querySelector("#aaplayer"),
+					src:"http://www.high666.com/ice-age.mp4",
+					width:"640px",
+					height:"480px",
+					autoplay:true
+				});
+			</pre>
+		</div>
 		<script src="//cdn.bootcss.com/SyntaxHighlighter/3.0.83/scripts/shCore.js"></script>
 		<script src="//cdn.bootcss.com/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js"></script>
 		<script src="js/aa-player.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 		(function() {
 	    	
-	    	
-	    	
 	    	document.addEventListener("DOMContentLoaded", function() {
 				var player = new AAPlayer({
 					el:document.querySelector(".wrapper"),
 					src:"http://www.high666.com/ice-age.mp4",
-					width:"6.4rem",
-					height:"4.8rem",
+					width:"640px",
+					height:"480px",
 					autoplay:true
 				});
 		    	SyntaxHighlighter.all();
@@ -68,6 +60,7 @@
 		    	},false);
 		    	
 	    	}, false);
+	    	
 		})();
 		</script>
 	</body>
