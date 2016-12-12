@@ -11,12 +11,12 @@
 <script type="text/javascript">  
 var video = document.getElementById("video");  
 var context = canvas.getContext("2d");  
-var errocb = function () {  
-    console.log('sth wrong!');  
+var errocb = function (error) {  
+    alert(error.name);
 }  
   
 if (navigator.getUserMedia) { // 标准的API  
-    navigator.getUserMedia({ "video": true }, function (stream) {  
+    navigator.mediaDevices.getUserMedia({ "video": true }, function (stream) {  
         video.src = stream;  
         video.play();  
     }, errocb);  
