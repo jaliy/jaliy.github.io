@@ -1,3 +1,9 @@
+video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+video::-webkit-media-controls {
+  display: none !important;
+}
 .aa-player-container {
   position: relative;
   width: 100%;

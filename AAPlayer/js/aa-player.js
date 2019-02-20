@@ -46,7 +46,7 @@
 	var AAPlayer = function(options) {
 		
 		var template = [
-			       '	<video class="J_aa_video" src="{{aa-src}}"></video>',
+			       '	<video class="J_aa_video" src="{{aa-src}}" control="false" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-playsinline></video>',
 			       '	<div class="J_aa_play aa-player-pause">',
 			       '		<a class="J_aa_icon aa-player-button aa-player-button-play" href="javascript:;"></a>',
 			       '	</div>',
@@ -57,6 +57,7 @@
 			       '	</div>',
 			       '	<div class="J_aa_loading aa-player-loading"><div class="aa-player-loading-eff"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>',
 			       ].join("");
+			       
 		
 		this.options = _merge({}, this.options, options);
 		
@@ -117,10 +118,22 @@
 			this._video.addEventListener("loadedmetadata", function() {
 				_self.container.querySelector(".J_total").innerText = util.formatSeconds(_self._video.duration);
 				
-				if(_self.options.autoplay===true) {
-					_self.play();
-				}
 			});
+			
+			this._video.onplay=function() {
+				var btnControl = _self.container.querySelector(".J_aa_control");
+				
+				_self.container.querySelector(".J_aa_icon").style.display = "none";
+				
+				btnControl.className = btnControl.className.replace(/aa-player-button-play/g,"aa-player-button-pause");
+			};
+			this._video.onpause=function() {
+				var btnControl = _self.container.querySelector(".J_aa_control");
+				
+				_self.container.querySelector(".J_aa_icon").style.display = "block";
+				
+				btnControl.className = btnControl.className.replace(/aa-player-button-pause/g,"aa-player-button-play");
+			};
 			
 			//播放&&暂停
 			this.container.querySelector(".J_aa_play").addEventListener("click", function() {
@@ -144,24 +157,12 @@
 		 * 播放API
 		 */
 		play: function() {
-			var btnControl = this.container.querySelector(".J_aa_control");
-			
-			this.container.querySelector(".J_aa_icon").style.display = "none";
-			
-			btnControl.className = btnControl.className.replace(/aa-player-button-play/g,"aa-player-button-pause");
-			
 			this._video.play();
 		},
 		/***
 		 * 暂停API
 		 */
 		pause: function() {
-			var btnControl = this.container.querySelector(".J_aa_control");
-			
-			this.container.querySelector(".J_aa_icon").style.display = "block";
-			
-			btnControl.className = btnControl.className.replace(/aa-player-button-pause/g,"aa-player-button-play");
-			
 			this._video.pause();
 		},
 		/**
