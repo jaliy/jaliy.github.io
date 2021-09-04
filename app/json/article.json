@@ -1,13 +1,8 @@
 {
 	"articles":[
-	    {"title":"程序猿、攻城狮","description":"如果问题，请多指教！","url":"https://github.com/jaliy"},
-	    {"title":"基于html5中video标签二次开发视频播放器AAPlayer","description":"基于html5中video标签二次开发视频播放器AAPlayer","url":"https://github.com/jaliy/AAPlayer"},
-	    {"title":"Vue + Vue-Router + Webpack学习入门（四、老王笔记V2）","description":"使用Vuex管理状态，使得更大的SPA应用更容易管理","url":"https://github.com/jaliy/noteapp/tree/master/4-noteapp-v2"},
-	    {"title":"Vue + Vue-Router + Webpack学习入门（三、老王笔记）","description":"使用Vue+Vue-Router完成一个简单的笔记功能APP","url":"https://github.com/jaliy/noteapp/tree/master/3-noteapp"},
-	    {"title":"Vue + Vue-Router + Webpack学习入门（二、开发环境搭建&less使用&简单的Header组件）","description":"搭建开发环境，修改后实时预览，样式支持less(sass同理)，简单的Header组件和组件间的基本通信","url":"https://github.com/jaliy/noteapp/tree/master/2-less-simplecomponent"},
-		{"title":"Vue + Vue-Router + Webpack学习入门（一、整合）","description":"刚开始学习Vue，使用webpack打包，一点一点手动配置起来，有待完善。","url":"https://github.com/jaliy/noteapp/tree/master/1-combine"},
-		{"title":"jQuery图片懒加载插件 - j-lazyload","description":"一个简单的懒加载插件，基于jQuery实现，压缩后大小仅有3kb","url":"https://github.com/jaliy/j-lazyload"},
-		{"title":"Angular入门学习","description":"Angularjs1.x和Angular自带的路由学习，用到了mui，可以打包成app，哈哈，","url":"http://jaliy.github.io/Setting"}
-		
+	    {"title":"程序猿、前端图形攻城狮","description":"欢迎交流和指教","url":"https://github.com/jaliy"},
+	    {"title":"前端图形入门 - 在WebGL中实现3D物体的选中和操作","description":"基于ThreeJS实现3D中的物体选中实现，移动、旋转、缩放操作支持","url":"https://github.com/jaliy/j3d-pick"},
+	    {"title":"Vue + Vue-Router + Webpack学习入门（二、老王笔记V2）","description":"使用Vuex管理状态，使得更大的SPA应用更容易管理","url":"https://github.com/jaliy/noteapp/tree/master/4-noteapp-v2"},
+		{"title":"jQuery图片懒加载插件 - j-lazyload","description":"图片懒加载插件","url":"https://github.com/jaliy/j-lazyload"}
 	]
 }
