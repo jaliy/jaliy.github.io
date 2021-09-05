@@ -2,6 +2,6 @@
 	"articles":[
 		{"title":"程序猿、前端图形攻城狮","description":"欢迎交流和指教","url":"https://github.com/jaliy"},
 	    {"title":"前端图形入门 - 在WebGL中实现3D物体的选中和操作","description":"基于ThreeJS实现3D中的物体选中实现，移动、旋转、缩放操作支持","url":"https://github.com/jaliy/j3d-pick"},
-	    {"title":"Vue + Vue-Router + Webpack学习入门（老王笔记）","description":"使用Vuex管理状态，使得更大的SPA应用更容易管理","url":"https://github.com/jaliy/noteapp/tree/master/4-noteapp-v2"}
+	    {"title":"Vue + Vue-Router + Webpack学习入门（老王笔记）","description":"使用Vuex管理状态，使得更大的SPA应用更容易管理","url":"https://github.com/jaliy/noteapp"}
 	]
 }
